@@ -17,7 +17,7 @@ const menu = document.getElementById("user-dropdown");
  
 
   
-const API_KEY = '1a487a0699ca0d5a5a4172db066380f1'; // Replaced with my OpenWeatherMap API key
+const API_KEY = 'API_Key'; // Replaced with my OpenWeatherMap API key
 
 const searchBtn = document.getElementById('searchBtn');
 const locBtn = document.getElementById('locBtn');
