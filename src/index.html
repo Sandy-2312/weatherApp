@@ -4,10 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SkyNote - Weather App</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/weatherLogo.png">
 </head>
 <body>
     
+    <!--Navbar-->
+    <nav class=" bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center justify-around">
+                <img src="./assets/weatherLogo.png" class="h-12 md:h-14" alt="Weather App Logo" />
+                <div class="flex flex-col px-2">
+                    <span class="self-center text-xl md:text-2xl font-semibold dark:text-white">SkyNote</span>
+                    <span class="self-center text-xs md:text-md dark:text-gray-400">Weather App</span>
+                </div>
+            </a>
+            <!--<div class="flex items-center flex-col-reverse md:flex-row">
+                <div class="flex justify-evenly lg:mr-2 lg:pr-4 md:pt-2 md:pr-4 md:ml-4 md:pl-4">
+                    <a href="" target="_blank">
+                    <i class="fa-brands fa-linkedin p-2 md:p-1 md:text-xl lg:hover:text-2xl active:text-2xl lg:active:text-xl"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-github p-2 md:p-1 md:text-xl lg:hover:text-2xl active:text-2xl lg:active:text-xl"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-discord p-2 md:p-1 md:text-xl lg:hover:text-2xl active:text-2xl lg:active:text-xl"></i>
+                    </a>
+                </div>
+                <img class="w-14 h-14 order-2 rounded-full" src="./assets/prof_main_3.jpg" alt="user photo">
+            </div>-->
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- Relative container to position dropdown -->
+                <div class="relative">
+                  <!-- Trigger button -->
+                  <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-12 h-12 rounded-full" src="./assets/prof_main_3.jpg" alt="user photo">
+                  </button>
+              
+                  <!-- Dropdown menu positioned to the left -->
+                  <div class="z-50 hidden absolute top-0 right-full mr-2 w-36 md:w-52 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+                    <div class="px-4 py-3">
+                      <span class="block text-md text-center text-gray-900 dark:text-gray-400">Sandeep Kumar</span>
+                      <div class="flex justify-evenly p-0 m-0 lg:mr-2 lg:pr-4 md:p-2">
+                        <a href="" target="_blank">
+                        <i class="fa-solid fa-envelope  p-2 md:p-2 md:text-xl lg:hover:text-2xl md:active:text-2xl lg:active:text-xl"></i>
+                        </a>
+                        <a href="" target="_blank">
+                        <i class="fa-brands fa-linkedin p-2 md:p-2 md:text-xl lg:hover:text-2xl active:text-2xl lg:active:text-xl"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-github p-2 md:p-2 md:text-xl lg:hover:text-2xl active:text-2xl lg:active:text-xl"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="fa-solid fa-phone p-2 md:p-2 md:text-xl lg:hover:text-2xl active:text-2xl lg:active:text-xl"></i>
+                        </a>
+                    </div>
+                      <!--<span class="block text-sm text-gray-500 truncate dark:text-gray-400">sandeepkumar1162b@gmail.com</span>-->
+                    </div>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Github</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Linkedin</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">About API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>              
+        </div>
+    </nav>
+  
+
+    <div>
+        <!--Search Section-->
+        <section>
+        </section>
+
+        <!--Display Section-->
+        <div>
+            <!--Today's/Searched Weather Data Display Section-->
+            <section>
+
+            </section>
+            <!--5 Day Weather Data Display Section-->
+            <section>
+
+            </section>
+        </div>
+    </div>
+    
+    
+    <footer></footer>
+
     <script src="./file.js"></script>
 </body>
 </html>
