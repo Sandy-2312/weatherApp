@@ -107,3 +107,34 @@ function hideError() {
     errorEl.classList.add('hidden');
 }
 
+
+ function displayWeather(data) {
+    const cityName = data.city.name;
+    const current = data.list[0];
+  
+    currentWeatherEl.innerHTML = `
+      <div class="text-center">
+        <h2 class="text-xl italic">Currently in ${cityName}</h2>
+        <img src="https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png" class="mx-auto" />
+        <p>${current.weather[0].description}</p>
+        <p>🌡️ ${current.main.temp} °C | 💧 ${current.main.humidity}% | 🌬️ ${current.wind.speed} m/s</p>
+      </div>
+    `;
+
+    fiveDays.innerHTML = `<h3 class="text-xl font-bold text-center p-4" id="fiveDay">5-Days Forecast for ${cityName}</h3>`
+  
+    forecastEl.innerHTML = '';
+    for (let i = 0; i < data.list.length; i += 8) {
+      const forecast = data.list[i];
+      forecastEl.innerHTML += `
+        <div class="w-full flex flex-col items-center justify-center gap-1 border-black m-1 text-slate-900 rounded-lg py-2 px-4 shadow-lg shadow-black text-center min-w-[250px] flex-shrink-2 snap-center lg:min-w-0 md:flex-shrink-2 lg:flex-shrink-5">
+          <h3 class="font-semibold">${new Date(forecast.dt_txt).toDateString()}</h3>
+          <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" class="mx-auto" />
+          <p>${forecast.weather[0].main}</p>
+          <p>🌡️ ${forecast.main.temp} °C</p>
+          <p>💧 ${forecast.main.humidity}%</p>
+          <p>🌬️ ${forecast.wind.speed} m/s</p>
+        </div>
+      `;
+    }
+  }
