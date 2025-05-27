@@ -97,3 +97,13 @@ function renderRecentCities() {
   
  renderRecentCities();
 
+ 
+function showError(msg) {
+    errorEl.textContent = msg;
+    errorEl.classList.remove('hidden');
+}
+  
+function hideError() {
+    errorEl.classList.add('hidden');
+}
+
