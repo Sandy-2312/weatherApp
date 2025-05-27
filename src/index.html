@@ -8,16 +8,16 @@
     <title>SkyNote - Weather App</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/weatherLogo.png">
 </head>
-<body>
+<body class="bg-blue-50 min-h-screen">
     
     <!--Navbar-->
     <nav class=" bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center justify-around">
-                <img src="./assets/weatherLogo.png" class="h-12 md:h-14" alt="Weather App Logo" />
+                <img src="./assets/weatherLogo.png" class="h-12 md:h-22 md:px-2" alt="Weather App Logo" />
                 <div class="flex flex-col px-2">
-                    <span class="self-center text-xl md:text-2xl font-semibold dark:text-white">SkyNote</span>
-                    <span class="self-center text-xs md:text-md dark:text-gray-400">Weather App</span>
+                    <span class="self-center text-xl md:text-4xl font-semibold dark:text-white">SkyNote</span>
+                    <span class="self-center text-xs md:text-xl dark:text-gray-400">Weather App</span>
                 </div>
             </a>
             <!--<div class="flex items-center flex-col-reverse md:flex-row">
@@ -36,12 +36,16 @@
             </div>-->
             <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <!-- Relative container to position dropdown -->
-                <div class="relative">
+                <div class="relative justify-center">
                   <!-- Trigger button -->
-                  <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="w-12 h-12 rounded-full" src="./assets/prof_main_3.jpg" alt="user photo">
-                  </button>
+                   <div class="flex-col items-center">
+                    <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 ml-2 md:ml-1" id="user-menu-button">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-12 h-12 md:w-20 md:h-20 lg:hover:w-22 lg:hover:h-22 rounded-full" src="./assets/prof_main_3.jpg" alt="user photo">
+                      </button>
+                      <p class="text-xs md:text-lg text-gray-400 text-center p-1">About Me</p>
+                   </div>
+                  
               
                   <!-- Dropdown menu positioned to the left -->
                   <div class="z-50 hidden absolute top-0 right-full mr-2 w-36 md:w-52 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -80,20 +84,34 @@
     </nav>
   
 
-    <div>
+    <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-6 lg:flex">
         <!--Search Section-->
         <section>
+            <!-- Search Section -->
+            <div class="flex flex-col lg:flex-col gap-2 mb-4">
+                <input id="cityInput" type="text" placeholder="Enter city name..." class="flex-1 p-2 border rounded-lg" />
+                <div>   
+                    <button id="searchBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg">🔍 Search</button> 
+                    <button id="locBtn" class="bg-green-500 text-white px-4 py-2 rounded-lg">📍Current City</button>
+                </div>
+            </div>
+  
+            <!-- Recently Searched Dropdown -->
+            <div class="mb-4">
+                <select id="recentCities" class="w-full p-2 border rounded-lg hidden"></select>
+            </div>
         </section>
 
         <!--Display Section-->
         <div>
+            <h1 class="text-3xl font-bold text-center mb-4">🌤️ Weather Forecast</h1>
             <!--Today's/Searched Weather Data Display Section-->
             <section>
-
+                <div id="currentWeather" class="mb-6"></div>
             </section>
             <!--5 Day Weather Data Display Section-->
             <section>
-
+                <div id="forecast" class=""></div>
             </section>
         </div>
     </div>
