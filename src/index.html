@@ -70,37 +70,37 @@
     </nav>
   
 
-    <div class="max-w-2xl lg:max-w-6xl mx-auto rounded-2xl shadow-lg p-6 mt-4 lg:flex lg:flex-row-reverse lg:justify-between">
+    <div class="max-w-2xl lg:max-w-6xl mx-auto rounded-2xl shadow-2xl p-6 mt-4 lg:flex lg:flex-row-reverse lg:justify-between">
         <!--Search Section-->
         <section>
             <!-- Search Section -->
             <div class="flex flex-col lg:flex-col gap-2 mb-4">
-                <input id="cityInput" type="text" placeholder="Enter city name..." class="flex-1 p-2 border rounded-lg lg:w-md md:my-3" />
+                <input id="cityName" type="text" placeholder="Enter city name..." class="flex-1 p-2 border rounded-lg lg:w-md md:my-3" />
                 <div class="flex justify-evenly">   
-                    <button id="searchBtn" class="bg-gray-900 text-white px-4 py-2 rounded-lg">🔍 Search</button> 
-                    <button id="locBtn" class="bg-gray-900 text-white px-4 py-2 rounded-lg">📍Current</button>
+                    <button id="searchCityBtn" class="bg-gray-900 text-white px-4 py-2 rounded-lg">🔍 Search</button> 
+                    <button id="locationBtn" class="bg-gray-900 text-white px-4 py-2 rounded-lg">📍Current</button>
                 </div>
             </div>
   
             <!-- Recently Searched Dropdown -->
             <div class="mb-4">
-                <select id="recentCities" class="w-full p-2 border rounded-lg lg:w-md md:my-3 hidden"></select>
+                <select id="recentCitiesList" class="w-full p-2 border rounded-lg lg:w-md md:my-3 hidden"></select>
             </div>
 
             <!-- Error Display -->
-            <div id="error" class="text-red-500 mb-4 hidden"></div>
+            <div id="errorDetails" class="text-red-500 mb-4 hidden"></div>
             
         </section>
 
             <!--Today's/Searched Weather Data Display Section-->
             <section>
                 <h1 class="text-3xl font-bold text-center mb-4">🌤️ Weather Forecast</h1>
-                <div id="currentWeather" class="mb-6"></div>
+                <div id="currentWeatherDetails" class="mb-6"></div>
             </section>
         </div>
         <div class="max-w-2xl lg:max-w-6xl mx-auto rounded-2xl shadow-lg p-6">
             <!--5 Day Weather Data Display Section-->
-            <h3 class="text-xl font-bold text-center p-4" id="fiveDay">5-Days Forecast</h3>
+            <h3 class="text-xl font-bold text-center p-4" id="fiveDays">5-Days Forecast</h3>
             <section>
                 <div id="forecast" class="lg:flex lg:justify-evenly flex overflow-x-auto snap-x snap-mandatory space-x-4"></div>
             </section>
