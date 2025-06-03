@@ -100,10 +100,11 @@ function renderRecentCities() {
       recentCities.classList.add('hidden');
     }
 }
-  
- renderRecentCities();
 
- 
+//calling function to display recent cities
+renderRecentCities();
+
+//Error handling functions
 function showError(msg) {
     error.textContent = msg;
     error.classList.remove('hidden');
@@ -113,7 +114,7 @@ function hideError() {
     error.classList.add('hidden');
 }
 
-
+//display all weather details for today and upcoming 5 Days
  function displayWeather(data) {
     const cityName = data.city.name;
     const current = data.list[0];
